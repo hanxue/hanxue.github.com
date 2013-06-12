@@ -2,7 +2,6 @@
   * Shamelessly copied from https://github.com/gkoberger/stacksort/blob/master/js/script.js *
   */
 
-
 $(function() {
 
 
@@ -86,30 +85,11 @@ $(function() {
         _.generate_url();
     });
 
-    $('.desc a').click(function() {
-        if($(this).data('type') === 'list') {
-            $('#input').val('[8,6,7,5,3,0,9]');
-        } else if($(this).data('type') === 'words') {
-            $('#input').val('["World","Hello"]');
-        } else if($(this).data('type') === 'text') {
-            $('#input').val('"jennyigotyournumber"');
-        } else {
-            $('#input').val('{3:"Hello",9:"World",1:"Oh,"}');
-        }
-        _.stop = true;
-        _.reset();
-
-        if($(this).parent().hasClass('start-now')) {
-            $('#sort').trigger('click');
-        }
-        return false;
-    }).eq(0).trigger('click');
+    
 
     $('#stop').click(function() {
         _.stop = true;
         return false;
     });
     
-});
-
 });
