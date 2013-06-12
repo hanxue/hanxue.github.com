@@ -28,7 +28,6 @@ $(function() {
         stop: false,
         reset: function() {
             _.item = 0;
-            $('#output').val('');
             $('#logger').empty().append($('<div>', {class: 'oc', text: 'output console'}));
             $('#sort').attr('disabled', false).text('Sort');
             $('.done').hide();
@@ -43,12 +42,13 @@ $(function() {
         generate_url: function() {
             /* Example URL: http://www.amazon.com/exec/obidos/ASIN/0307381676/hansbusblo-20 */
             var prefix_url = 'http://www.amazon.com/exec/obidos/ASIN/';
-            var affiliate_url = prefix_url + ASIN + '/' + affiliate_id;
+            var affiliate_url = prefix_url + $('#ASIN').val() + '/' + $('#affiliate_id').val();
+
             //var question_url = _.api + 'search/advanced?sort=votes&accepted=True&notice=False&tagged=javascript&title=sort&page=' + _.page + common_url;
 
            
             // Save the new answers
-            window.localStorage.answers = affiliate_url;
+            window.localStorage.link = affiliate_url;
         },
         
         wait: function (state) {
