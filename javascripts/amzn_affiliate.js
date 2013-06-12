@@ -29,11 +29,9 @@ $(function() {
         reset: function() {
             _.item = 0;
             $('#logger').empty().append($('<div>', {class: 'oc', text: 'output console'}));
-            $('#sort').attr('disabled', false).text('Sort');
+            $('#generate').attr('disabled', false).text('Generate URL');
             $('.done').hide();
         },
-            
-
 
         generate_url: function() {
             /* Example URL: http://www.amazon.com/exec/obidos/ASIN/0307381676/hansbusblo-20 */
