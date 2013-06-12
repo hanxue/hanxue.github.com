@@ -109,4 +109,7 @@ $(function() {
         _.stop = true;
         return false;
     });
+    
+});
+
 });
