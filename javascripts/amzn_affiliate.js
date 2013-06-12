@@ -4,8 +4,6 @@
 
 $(function() {
 
-
-
     function parseArray(array) { 
         if(!array) {
             return [];
