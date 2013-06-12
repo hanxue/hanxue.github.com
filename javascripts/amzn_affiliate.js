@@ -76,6 +76,7 @@ $(function() {
     });
 
     $('#generate').click(function() {
+        window.alert('Yes, calling generate click() function');
         var warn = "This generates an Amazon Affiliate link. There is no verification if the ASIN (Amazon Standard Identification Number) is valid.";
         var ready = window.localStorage.ss_confirmed || confirm(warn);
         if(!ready) {
