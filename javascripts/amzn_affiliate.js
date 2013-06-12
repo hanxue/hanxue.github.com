@@ -42,6 +42,7 @@ $(function() {
            
             // Save the new answers
             window.localStorage.link = affiliate_url;
+            // $('#generate').attr('disabled', false).text('Generate URL')
         },
         
         wait: function (state) {
@@ -59,17 +60,9 @@ $(function() {
     _.wait(false);
 
     /* Dom stuff */
-    $('#no').click(function() {
-        $('#output').val("");
-        $('#generate').attr('disabled', true).text('Generating...');
-        _.stop = false;
 
-        _.run_snippet();
-        return false;
-    });
 
     $('#generate').click(function() {
-        window.alert('Yes, calling generate click() function');
         var warn = "This generates an Amazon Affiliate link. There is no verification if the ASIN (Amazon Standard Identification Number) is valid.";
         var ready = window.localStorage.ss_confirmed || confirm(warn);
         if(!ready) {
@@ -79,7 +72,7 @@ $(function() {
 
         _.reset();
 
-        $('#generate').attr('disabled', true).text('Generating...');
+        // $('#generate').attr('disabled', true).text('Generating...');
         _.stop = false;
 
         _.generate_url();
