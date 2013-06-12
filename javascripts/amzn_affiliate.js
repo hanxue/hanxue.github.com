@@ -35,10 +35,6 @@ $(function() {
             
 
 
-                });
-            });
-        },
-        
         generate_url: function() {
             /* Example URL: http://www.amazon.com/exec/obidos/ASIN/0307381676/hansbusblo-20 */
             var prefix_url = 'http://www.amazon.com/exec/obidos/ASIN/';
